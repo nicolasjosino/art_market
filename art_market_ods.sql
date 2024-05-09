@@ -41,7 +41,7 @@ SELECT pedidos.id,
 	   (SELECT CASE WHEN pedidos.status_pedido = 1 THEN 'Em Andamento'
 					WHEN pedidos.status_pedido = 2 THEN 'Concluído'
 					WHEN pedidos.status_pedido = 3 THEN 'Cancelado'
-					ELSE 'Indefinido' END) AS status
+					ELSE 'Indefinido' END) AS status_pedido
 INTO art_market_ods.dbo.pedidos
 FROM art_market.dbo.pedidos
 
