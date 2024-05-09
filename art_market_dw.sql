@@ -24,9 +24,14 @@ SELECT DISTINCT id, nome
 INTO art_market_dw.dbo.dim_categorias
 FROM art_market_ods.dbo.categorias
 
-SELECT art_market_ods.dbo.pedidos.id as id_pedido,
+SELECT DISTINCT id, status_pedido
+INTO art_market_dw.dbo.dim_status_pedidos
+FROM art_market_ods.dbo.pedidos
+
+SELECT art_market_ods.dbo.itens_pedido.id as id,
 	   art_market_ods.dbo.itens_pedido.valor as valor,
 	   art_market_ods.dbo.pedidos.data_pedido as data_pedido,
+	   art_market_ods.dbo.pedidos.id as id_status,
 	   art_market_ods.dbo.pedidos.id_cliente,
 	   art_market_ods.dbo.pedidos.id_profissional,
 	   art_market_ods.dbo.itens_pedido.id_trabalho
