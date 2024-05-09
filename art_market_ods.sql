@@ -1,3 +1,5 @@
+CREATE DATABASE art_market_ods
+
 SELECT clientes.id, Trim(clientes.nome) AS nome,
 	   Trim(clientes.email) AS email,
 	   Trim(clientes.telefone) AS telefone,

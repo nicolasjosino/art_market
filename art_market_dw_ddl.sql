@@ -1,3 +1,5 @@
+CREATE DATABASE art_market_dw
+
 CREATE TABLE dim_cliente (
 	id_cliente INT IDENTITY(1,1) PRIMARY KEY,
 	nome_cliente VARCHAR(50),

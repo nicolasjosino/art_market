@@ -1,3 +1,5 @@
+CREATE DATABASE art_market
+
 CREATE TABLE clientes
   (
      id       SMALLINT NOT NULL IDENTITY(1, 1) PRIMARY KEY,
